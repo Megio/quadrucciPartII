@@ -6,12 +6,17 @@ const sketch = p => {
 
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight);
-    p.colorMode(p.HSB)
   };
 
   p.draw = () => {
-    p.background(0,0,100);
-    
+    p.background(255);
+    const x = p.mouseX
+    const y = p.mouseY
+
+    p.stroke(0)
+    p.strokeWeight(4)
+    p.noFill()
+    p.ellipse(x, y, 40, 40)
   };
 
   p.windowResized = () => {
@@ -19,7 +24,6 @@ const sketch = p => {
   };
 
   p.mousePressed = () => {
-    distance -= 1;
   };
 };
 
